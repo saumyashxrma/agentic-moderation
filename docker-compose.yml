@@ -1,0 +1,19 @@
+services:
+  localstack:
+    image: localstack/localstack:3.8.1
+    container_name: localstack
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=sqs,s3,iam
+      - DEBUG=1
+      - PERSISTENCE=0
+    volumes:
+      - "./.localstack:/var/lib/localstack"
+
+  valkey:
+    image: valkey/valkey:latest
+    container_name: valkey
+    ports:
+      - "6379:6379"
+    command: valkey-server --save 60 1 --loglevel warning
