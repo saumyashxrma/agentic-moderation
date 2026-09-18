@@ -1,0 +1,24 @@
+Warming up models (this takes ~10-20s)...
+Warm-up complete in 14.98s
+
+Text                                       | Tier       | Flag   | Exp    | OK | Lat     | Reason
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Have a wonderful day!                      | embedding  | GREEN  | GREEN  | OK |  0.04s | Tier1 semantic match: benign (0.48)
+Thanks for the help, really appreciate it  | llm        | GREEN  | GREEN  | OK |  3.98s | Thank you and positive feedback
+When is the meeting?                       | llm        | GREEN  | GREEN  | OK |  2.93s | Standard meeting inquiry
+This pizza is damn good                    | embedding  | GREEN  | GREEN  | OK |  0.04s | Tier1 semantic match: benign (0.47)
+I will find you and hurt you               | embedding  | RED    | RED    | OK |  0.03s | Tier1 semantic match: threat (0.71)
+All people from that country are subhuman  | embedding  | RED    | RED    | OK |  0.03s | Tier1 semantic match: hate_speech (
+Click this link to win free money          | embedding  | RED    | RED    | OK |  0.02s | Tier1 semantic match: spam (0.72)
+I h4te you so much                         | embedding  | YELLOW | YELLOW | OK |  0.03s | Tier1 semantic match: harassment (0
+I'm going to end your existence            | embedding  | RED    | RED    | OK |  0.03s | Tier1 semantic match: threat (0.58)
+You won't see tomorrow                     | llm        | GREEN  | RED    | XX |  3.72s | Standard meeting inquiry
+Nice work, genius 🙄                        | llm        | GREEN  | YELLOW | XX |  3.09s | Standard positive feedback
+Oh great, another brilliant idea           | llm        | GREEN  | YELLOW | XX |  2.98s | Standard positive feedback
+You're such an idiot                       | embedding  | YELLOW | YELLOW | OK |  0.03s | Tier1 semantic match: harassment (0
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Correct:  10/13 (77%)
+Tier 1:   8/13 (62%)  avg 0.032s
+Tier 2:   5/13 (38%)  avg 3.34s
+Speedup:  Tier 1 is 65x faster
