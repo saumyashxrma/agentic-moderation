@@ -19,3 +19,15 @@ venv/
 # OS
 Thumbs.db
 desktop.ini
+.DS_Store
+
+# Pipeline
+pipeline/venv/
+**/venv/
+**/__pycache__/
+pipeline/lambda_ingestion/package/
+pipeline/*/package/
+*.zip
+output.json
+output2.json
+**/output*.json
